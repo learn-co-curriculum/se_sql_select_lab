@@ -1,10 +1,12 @@
 # STEP 1A
 # Import SQL Library and Pandas
+import sqlite3
+import pandas as pd
 
 # STEP 1B
 # Connect to the database
-conn = None
-
+conn = sqlite3.connect('data.sqlite')
+cur = conn.cursor()
 
 # STEP 2
 # Replace None with your code
