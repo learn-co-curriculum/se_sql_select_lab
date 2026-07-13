@@ -6,12 +6,13 @@ import pandas as pd
 # STEP 1B
 # Connect to the database
 conn = sqlite3.connect('data.sqlite')
-cur = conn.cursor()
+# cur = conn.cursor()
 
 # STEP 2
 # Replace None with your code
-df_first_five = None
-
+employees = pd.read_sql("""
+SELECT * FROM employees;
+""", conn)
 # STEP 3
 # Replace None with your code
 df_five_reverse = None
@@ -39,3 +40,6 @@ sum_total_price = None
 # STEP 9
 # Replace None with your code
 df_day_month_year = None
+
+
+print(employees)
